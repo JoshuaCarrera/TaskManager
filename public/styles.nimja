@@ -1,0 +1,206 @@
+<style>
+
+
+header {
+  display: flex;
+  align-items: center;
+  background-color: #333;
+  color: #fff;
+  padding: 1rem;
+}
+
+header a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2rem;
+  padding: 0.5rem 1rem;
+  transition: background-color 0.3s ease;
+}
+
+header a:hover {
+  background-color: #555;
+}
+
+header title {
+  font-weight: bold;
+  margin-right: auto; /* Empuja el título a la izquierda */
+}
+
+
+/* Estilos generales */
+.overview {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f0f0f0;
+  font-family: Arial, sans-serif;
+}
+
+.task-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 50px;
+}
+
+.task {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin: 25px;
+  padding: 25px;
+  width: 250px;
+}
+
+.task-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.task h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.task p {
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+.task .btn {
+  background-color: #007bff;
+  border-radius: 5px;
+  color: #fff;
+  display: inline-block;
+  font-size: 0.9rem;
+  padding: 8px 16px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.task .btn:hover {
+  background-color: #0056b3;
+}
+
+.task form {
+  margin-top: 10px;
+}
+
+.task input[type="submit"] {
+  background-color: #dc3545;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 0.9rem;
+  padding: 8px 16px;
+  transition: background-color 0.3s ease;
+}
+
+.task input[type="submit"]:hover {
+  background-color: #c82333;
+}
+
+
+.task-status.done {
+  background-color: #28a745;
+  color: #fff;
+}
+
+.task-status.doing {
+  background-color: #ffc107;
+  color: #333;
+}
+
+.task-status.todo {
+  background-color: #4174da;
+  color: #fff;
+}
+
+
+.task-form {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1)
+}
+
+
+/* Estilos para los campos de entrada */
+.task-form input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  font-size: 16px;
+}
+
+/* Estilos para los botones de radio */
+.task-form .radio-group {
+  display: flex;
+  justify-content: center;
+  margin-top:    15px;
+  margin-bottom: 15px;
+
+}
+
+.task-form .radio-group label {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.task-form .radio-group input[type="radio"] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #ccc;
+  border-radius: 50%;
+  margin-right: 8px;
+  position: relative;
+}
+
+.task-form .radio-group input[type="radio"]:checked::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 12px;
+  height: 12px;
+  background-color: #4CAF50;
+  border-radius: 50%;
+}
+
+.task-form label {
+  font-weight: bold;
+}
+
+/* Estilos para el botón de envío */
+.task-form input[type="submit"] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 15px;
+}
+
+.task-form input[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+</style>
+
+
+{% block master %}
+{% endblock %}

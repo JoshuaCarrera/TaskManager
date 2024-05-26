@@ -1,0 +1,39 @@
+{% extends "public/master.nimja" %}
+
+{% block content %}
+    <form class="task-form" action="/update_task/{{ task.id }}" method="post">
+        <label for="title">Name</label><br>
+        <input type="text" id="title" name="title" value="{{ task.title }}" required><br>
+        <label for="desc">Description</label><br>
+        <input type="text" id="desc" name="desc" value="{{ task.desc }}">
+
+
+        <div class="radio-group">
+        {% if task.status == "TODO" %}
+        <input type="radio" id="TODO" name="status" value="TODO" checked>
+        <label for="TODO">To do</label>
+        {% else %}
+        <input type="radio" id="TODO" name="status" value="TODO">
+        <label for="TODO">To do</label>
+        {% endif %}
+
+        {% if task.status == "DOING" %}
+        <input type="radio" id="DOING" name="status" value="DOING" checked>
+        <label for="DOING">Doing</label>
+        {% else %}
+        <input type="radio" id="DOING" name="status" value="DOING">
+        <label for="DOING">Doing</label>
+        {% endif %}
+
+        {% if task.status == "DONE" %}
+        <input type="radio" id="DONE" name="status" value="DONE" checked>
+        <label for="DONE">Done</label>
+        {% else %}
+        <input type="radio" id="DONE" name="status" value="DONE">
+        <label for="DONE">Done</label>
+        {% endif %}
+        </div>
+
+        <input type="submit" value="Update">
+    </form> 
+{% endblock %}

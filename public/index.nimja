@@ -1,0 +1,39 @@
+
+{% extends "public/master.nimja" %}
+
+{% block content %}
+
+<div class="task-container">
+  {% for task in tasks %}
+
+    
+
+    <div class="task">
+
+      {% if task.status == "TODO" %}
+        <div class="task-status todo">
+      {% endif %}
+      {% if task.status == "DOING" %}
+        <div class="task-status doing">
+      {% endif %}
+      {% if task.status == "DONE" %}
+        <div class="task-status done">
+      {% endif %}
+      {{ task.status }}
+      </div>
+
+      <div class="task-content">
+        <h3>{{ task.title }}</h3>
+        <p>{{ task.desc }}</p>
+        <a href="/update_task/{{ task.id }}" class="btn">update</a>
+        <form action="/delete_task" method="post">
+          <input type="hidden" id="task_id" name="task_id" value="{{ task.id }}">
+          <input type="submit" value="delete">
+        </form>
+      </div>
+      
+    </div>
+  {% endfor %}
+</div>
+
+{% endblock %}

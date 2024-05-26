@@ -1,0 +1,22 @@
+{% extends "public/master.nimja" %}
+
+{% block content %}
+    <form class="task-form" action="/create_task" method="post">
+        <label for="task">Title</label><br>
+        <input type="text" id="title" name="title" required><br>
+        <label for="desc">Description</label><br>
+        <input type="text" id="desc" name="desc">
+        
+
+        <div class="radio-group">
+        <input type="radio" id="TODO" name="status" value="TODO" checked>
+        <label for="TODO">To do</label>
+        <input type="radio" id="DOING" name="status" value="DOING">
+        <label for="DOING">Doing</label>
+        <input type="radio" id="DONE" name="status" value="DONE">
+        <label for="DONE">Done</label>
+        </div>
+
+        <input type="submit" value="Create">
+    </form> 
+{% endblock %}

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+
+{% extends "public/styles.nimja" %}
+{% block master %}
+
+<html>
+<head>
+  <header>
+    <a href="/">
+        Task Manager
+    </a>
+    <a href="/create_task">
+        Create task
+    </a>
+</header>
+</head>
+
+<body>
+    <div class="overview">
+        {% block content %}
+        {% endblock %}
+    </div>
+</body>
+</html>
+{% endblock %}
